@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import RootLayout from './components/RootLayout';
 import Product from './components/Product';
+import Plants from './components/Plants';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Route index element={<Dashboard></Dashboard>}></Route>
       <Route path='/cart' element={<Cart></Cart>}></Route>
       <Route path='/products' element={<Product></Product>}></Route>
+      <Route path='/plants' element={<Plants></Plants>}></Route>
 
     </Route>
   ))

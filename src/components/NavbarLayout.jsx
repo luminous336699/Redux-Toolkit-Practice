@@ -10,7 +10,7 @@ const NavbarLayout = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
                 <Container fluid>
-                    <Navbar.Brand to='/' as={Link}>Luminous</Navbar.Brand>
+                    <Navbar.Brand to='/' className='fst-italic fw-bolder' as={Link}>Luminous</Navbar.Brand>
                     <Navbar.Toggle aria-controls="companyName" />
                     <Navbar.Collapse id="companyName">
                         <Nav
@@ -18,8 +18,16 @@ const NavbarLayout = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
+                            {/* Home page link */}
                             <Nav.Link to='/' as={Link}>Home</Nav.Link>
-                            <Nav.Link to='/products' as={Link}>Products</Nav.Link>
+
+                            {/* Accessories page link */}
+                            <Nav.Link to='/products' as={Link}>Accessories</Nav.Link>
+
+                            {/* plants page link */}
+                            <Nav.Link to='/plants' as={Link}>Plants</Nav.Link>
+
+                            {/* Dropdown menu */}
                             <NavDropdown title="Link" id="navbarScrollingDropdown">
                                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action4">
@@ -30,10 +38,10 @@ const NavbarLayout = () => {
                                     Something else here
                                 </NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="#" disabled>
-                                Link2
-                            </Nav.Link>
+
                         </Nav>
+
+                        {/* Search bar , cart */}
                         <Form className="d-flex">
                             <Form.Control
                                 type="search"
