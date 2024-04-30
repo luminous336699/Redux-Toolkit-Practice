@@ -4,11 +4,15 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const NavbarLayout = () => {
+
+    const cartAmount = useSelector(state => state.cart);
+
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" className="bg-body-tertiary fixed-top">
                 <Container fluid>
                     <Navbar.Brand to='/' className='fst-italic fw-bolder' as={Link}>Luminous</Navbar.Brand>
                     <Navbar.Toggle aria-controls="companyName" />
@@ -50,7 +54,7 @@ const NavbarLayout = () => {
                                 aria-label="Search"
                             />
                             <Button variant="outline-success">Search</Button>
-                            <Nav.Link to='/cart' as={Link} className='border rounded p-2 mx-2'>Cart</Nav.Link>
+                            <Nav.Link to='/cart' as={Link} className='border rounded p-2 mx-2 '>Cart<sup>{cartAmount.length}</sup></Nav.Link>
 
                         </Form>
                     </Navbar.Collapse>

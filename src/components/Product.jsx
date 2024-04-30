@@ -48,8 +48,8 @@ const Product = () => {
 
 
     return (
-        <div>
-           <h1 className='text-center m-4'>Product Dashboard</h1>
+        <div className='mt-5'>
+           <h1 className='text-center'>Product Dashboard</h1>
            <div className='row'> 
             {cards}
            </div>
